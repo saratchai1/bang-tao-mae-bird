@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07150e" />
+  <meta name="description" content="เว็บไซต์แนะนำนกและระบบนิเวศรอบอ่างเก็บน้ำบางเท่าแม่ อำเภอปลายพระยา จังหวัดกระบี่" />
+  <title>นกท้องถิ่นอ่างเก็บน้ำบางเท่าแม่ | Krabi Local Birds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Pridi:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scene" aria-hidden="true">
+    <div class="scene__sky"></div>
+    <div class="scene__mist scene__mist--one"></div>
+    <div class="scene__mist scene__mist--two"></div>
+    <div class="karst karst--left"></div>
+    <div class="karst karst--right"></div>
+    <div class="forest forest--back"></div>
+    <div class="forest forest--front"></div>
+    <div class="water-glow"></div>
+  </div>
+
+  <main class="site-shell">
+    <header class="hero" id="top">
+      <nav class="nav glass" aria-label="เมนูหลัก">
+        <a class="brand" href="#top" aria-label="กลับสู่ด้านบน">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M8 39c13-2 18-10 23-25 5 13 14 22 27 25-10 1-18 5-24 12-5-8-13-11-26-12Z"/><path d="M31 25c5 2 11 2 18-1"/></svg>
+          </span>
+          <span><b>บางเท่าแม่</b><small>Bird & Nature Guide</small></span>
+        </a>
+        <div class="nav__links">
+          <a href="#birds">นกเด่น</a>
+          <a href="#habitats">ถิ่นอาศัย</a>
+          <a href="#etiquette">ดูนกอย่างรับผิดชอบ</a>
+        </div>
+        <a class="nav__cta" href="#birds">สำรวจนก</a>
+      </nav>
+
+      <div class="hero__content reveal">
+        <div class="eyebrow"><span></span> Bang Thao Mae Reservoir · Krabi</div>
+        <h1>นกท้องถิ่น<br><em>อ่างเก็บน้ำบางเท่าแม่</em></h1>
+        <p>ทำความรู้จักนกที่มีโอกาสพบในภูมิทัศน์ป่า ริมน้ำ และพื้นที่เปิดรอบอ่างเก็บน้ำ พร้อมเรียนรู้ว่าควรมองหาแต่ละชนิดที่ไหน</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#birds">เริ่มสำรวจ <span>↘</span></a>
+          <button class="button button--ghost" id="soundscapeButton" type="button"><span class="sound-icon">◌</span> เปิดบรรยากาศป่า</button>
+        </div>
+        <div class="hero__note">
+          <span class="hero__note-dot"></span>
+          รายการนี้เป็นชนิดนกตัวอย่างสำหรับงานสื่อสารและการสำรวจเบื้องต้น — ควรยืนยันชนิดที่พบจริงด้วยการสำรวจภาคสนาม
+        </div>
+      </div>
+
+      <div class="hero__orbit" aria-hidden="true">
+        <svg class="line-bird" viewBox="0 0 220 170">
+          <path d="M31 118c29-31 54-50 82-53 17-2 32 5 44 17 11-2 21-8 31-18-4 16-14 27-30 35 1 22-9 39-28 51-18 11-40 11-59 3 17-3 29-10 38-22-29 4-55 0-78-13Z"/>
+          <path d="M112 66c-11-21-25-37-42-49 27 7 48 20 62 39M95 72C79 51 60 38 38 31c27 18 45 34 54 50M158 83l20 2"/>
+        </svg>
+        <div class="spark spark--1"></div><div class="spark spark--2"></div><div class="spark spark--3"></div><div class="spark spark--4"></div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true"><span></span>เลื่อนเพื่อสำรวจ</div>
+    </header>
+
+    <section class="bird-section" id="birds">
+      <div class="section-heading reveal">
+        <div>
+          <span class="kicker">LOCAL BIRD EXPLORER</span>
+          <h2>เลือกดูนกตาม<br>ลักษณะถิ่นอาศัย</h2>
+        </div>
+        <p>กดที่การ์ดเพื่อดูรายละเอียด ถิ่นอาศัย ช่วงเวลาที่เหมาะแก่การสังเกต และลักษณะเด่นของแต่ละชนิด</p>
+      </div>
+
+      <div class="filters reveal" id="filters" role="group" aria-label="กรองนกตามถิ่นอาศัย"></div>
+
+      <div class="bird-stage">
+        <svg class="connector-lines" aria-hidden="true" viewBox="0 0 1400 820" preserveAspectRatio="none">
+          <path d="M0 190C180 40 250 340 420 185S700 40 850 210s330 180 550-40" />
+          <path d="M0 555c190-150 300 125 470 10s300-190 475-40 280 125 455 10" />
+        </svg>
+        <div class="bird-grid" id="birdGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="habitats" id="habitats">
+      <div class="section-heading section-heading--light reveal">
+        <div><span class="kicker">FOUR MICRO-HABITATS</span><h2>หนึ่งอ่างเก็บน้ำ<br>หลายพื้นที่ชีวิต</h2></div>
+        <p>การมองนกให้เจอง่ายขึ้น เริ่มจากการมอง “พื้นที่” ก่อนมอง “ตัวนก” เพราะนกแต่ละกลุ่มเลือกใช้ภูมิทัศน์ต่างกัน</p>
+      </div>
+      <div class="habitat-grid">
+        <article class="habitat-card reveal"><span>01</span><div class="habitat-icon">≈</div><h3>ริมอ่างและลำคลอง</h3><p>พื้นที่เกาะคอน กิ่งไม้ริมน้ำ และแนวน้ำตื้น เหมาะกับนกกะเต็น นกยาง และนกกวัก</p></article>
+        <article class="habitat-card reveal"><span>02</span><div class="habitat-icon">⌁</div><h3>ชายป่า</h3><p>แนวต่อระหว่างป่ากับพื้นที่เปิด มีแมลงและผลไม้หลากหลาย เหมาะกับนกจาบคา นกขมิ้น และนกกินปลี</p></article>
+        <article class="habitat-card reveal"><span>03</span><div class="habitat-icon">⌇</div><h3>เรือนยอดป่า</h3><p>ต้นไม้ใหญ่และแนวป่าต่อเนื่องเป็นพื้นที่สำคัญสำหรับนกแก๊ก นกแซงแซว และนกกินผลไม้</p></article>
+        <article class="habitat-card reveal"><span>04</span><div class="habitat-icon">◌</div><h3>พื้นที่โล่ง</h3><p>คันดิน ทุ่งหญ้า และพื้นที่เปิดรอบอ่าง เหมาะกับนกกระแตแต้แว้ด นกกระปูด และนกที่หาอาหารบนพื้น</p></article>
+      </div>
+    </section>
+
+    <section class="etiquette" id="etiquette">
+      <div class="etiquette__panel glass reveal">
+        <div class="etiquette__visual" aria-hidden="true">
+          <div class="binocular-ring binocular-ring--left"></div><div class="binocular-ring binocular-ring--right"></div>
+          <span>Observe<br><b>without disturbing</b></span>
+        </div>
+        <div class="etiquette__content">
+          <span class="kicker">BIRDING ETIQUETTE</span>
+          <h2>ดูนกให้สนุก<br>โดยไม่รบกวนนก</h2>
+          <ul>
+            <li><b>รักษาระยะ</b><span>ไม่เข้าใกล้รัง ลูกนก หรือจุดพักมากเกินไป</span></li>
+            <li><b>ลดเสียง</b><span>หลีกเลี่ยงการเปิดเสียงเรียกนกซ้ำ ๆ หรือเสียงดังในพื้นที่ป่า</span></li>
+            <li><b>อยู่บนเส้นทาง</b><span>ลดการเหยียบย่ำพืชและรบกวนพื้นที่หากินของสัตว์ป่า</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div><b>บางเท่าแม่ Bird & Nature Guide</b><span>อำเภอปลายพระยา · จังหวัดกระบี่</span></div>
+      <p>Interactive concept website for local nature interpretation.</p>
+    </footer>
+  </main>
+
+  <dialog class="bird-modal" id="birdModal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" type="button" aria-label="ปิด">×</button>
+    <div class="modal-image-wrap"><img id="modalImage" alt="" /><div class="modal-image-fade"></div><span id="modalHabitat" class="modal-badge"></span></div>
+    <div class="modal-content">
+      <span class="kicker" id="modalEnglish"></span>
+      <h2 id="modalTitle"></h2>
+      <i id="modalScientific"></i>
+      <p id="modalDescription"></p>
+      <div class="modal-facts">
+        <div><span>ช่วงที่น่ามองหา</span><b id="modalTime"></b></div>
+        <div><span>จุดสังเกต</span><b id="modalSpot"></b></div>
+      </div>
+      <p class="modal-source">ภาพประกอบโหลดจาก Wikimedia/Wikipedia เมื่อมีภาพที่พร้อมใช้งาน</p>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
